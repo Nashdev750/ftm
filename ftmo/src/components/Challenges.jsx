@@ -13,7 +13,7 @@ const Challenges = ()=>{
                     </svg>
               </div>
               <p className="w-full flex flex-col justify-center items-center">
-                    <span className="text-blue-gray-600 text-2xl">FMPO</span>
+                    <span className="text-blue-gray-600 text-2xl">FMFXO</span>
                     <span className="text-blue-gray-600 text-2xl">CHALLENGE</span>
               </p>
               <p className="text-center text-blue-gray-600">Pass this challenge and get funded with upto 300k USD</p>
@@ -58,7 +58,7 @@ const Challenges = ()=>{
                     <span className="text-blue-gray-600 text-2xl">PLAYGROUND</span>
               </p>
               <p className="text-center text-blue-gray-600">Test your trading skills on a demo account</p>
-              <p className="font-bold text-blue-500">OUTCOME</p>
+              <p className="font-bold text-blue-500">NOTES</p>
               <div className="w-full ">
                 <p className="text-blue-gray-600 flex items-center gap-2 pb-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-green-500">
@@ -82,7 +82,7 @@ const Challenges = ()=>{
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-green-500">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span>Eligible for FMPO traders only, for stratey testing</span>
+                    <span>Eligible for FMFXO traders only, for stratey testing</span>
                 </p>
               </div>
               <Button className="w-full">Start FREE Challenge</Button>

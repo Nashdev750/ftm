@@ -24,7 +24,7 @@ export default function Home() {
         <div className='w-1/2 flex flex-col justify-between py-5 md:w-full'>
           <h1 className="w-full font-bold text-5xl text-blue-gray-900 md:text-3xl">Start Your Trading Career With Us</h1>
           <p className='text-lg font-normal text-blue-gray-800'>Trade with a funded account <br /> and get upto 90% profit. </p>
-          <Button className='max-w-[250px]' onClick={e=>router.push('/client-area')}>FTX Challenge</Button>
+          <Button className='max-w-[250px]' onClick={e=>router.push('/client-area')}>FMFX Challenge</Button>
         </div>
       </div>
       <div className="w-full m-auto py-10 bg-[#262729]">
@@ -35,7 +35,7 @@ export default function Home() {
             </div>
             <div className="w-1/3 md:w-1/2 md:p-2">
               <p className='text-cyan-500 text-3xl font-extrabold pb-3'>129+</p>
-              <p className='text-blue-gray-100 text-xl font-medium'>The number of countries where traders are registered with FTX</p>
+              <p className='text-blue-gray-100 text-xl font-medium'>The number of countries where traders are registered with FMFX</p>
             </div>
             <div className="w-1/3 md:w-1/2 md:p-2">
               <p className='text-cyan-500 text-3xl font-extrabold pb-3'>100k+</p>
@@ -57,7 +57,7 @@ export default function Home() {
             >1.</p>
             <p className='font-bold text-2xl text-cyan-500 py-4'>Trading Challege</p>
             <p className='text-md font-normal text-blue-gray-800'>
-            The initial stage of the Evaluation Process is the FTX Challenge. Successfully completing this stage is a prerequisite for progressing to the Verification stage. During the Challenge, you must demonstrate your trading abilities and exhibit discipline by adhering to the Trading Objectives.
+            The initial stage of the Evaluation Process is the FMFX Challenge. Successfully completing this stage is a prerequisite for progressing to the Verification stage. During the Challenge, you must demonstrate your trading abilities and exhibit discipline by adhering to the Trading Objectives.
             </p>
           </div>
           <div className="w-1/3 shadow-md p-5 rounded-2xl border md:w-full">
@@ -70,7 +70,7 @@ export default function Home() {
             >2.</p>
             <p className='font-bold text-2xl text-cyan-500 py-4'>Verification</p>
             <p className='text-md font-normal text-blue-gray-800'>
-            The Verification stage is the final step in the process of becoming an FTX Trader. Upon successful completion of this stage, and once your trading results have been verified, you will be invited to trade for our Proprietary Trading Firm.
+            The Verification stage is the final step in the process of becoming an FMFX Trader. Upon successful completion of this stage, and once your trading results have been verified, you will be invited to trade for our Proprietary Trading Firm.
             </p>
           </div>
           <div className="w-1/3 shadow-md p-5 rounded-2xl border md:w-full">
@@ -81,9 +81,9 @@ export default function Home() {
                 borderRadius:'50%'
               }}
             >3.</p>
-            <p className='font-bold text-2xl text-cyan-500 py-4'>FTX Trader</p>
+            <p className='font-bold text-2xl text-cyan-500 py-4'>FMFX Trader</p>
             <p className='text-md font-normal text-blue-gray-800'>
-            As a trader for the FTX Proprietary Trading firm, it is important that you trade with responsibility and consistency in order to earn up to 90% of your profits. If you are able to generate consistent profits on your FTX Account, we may consider scaling your account in accordance with our Scaling Plan.
+            As a trader for the FMFX Proprietary Trading firm, it is important that you trade with responsibility and consistency in order to earn up to 90% of your profits. If you are able to generate consistent profits on your FMFX Account, we may consider scaling your account in accordance with our Scaling Plan.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function Home() {
       
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Trading Period</p>
         <p className='text-md font-normal text-blue-gray-800'>
-        The FTX Challenge lasts for 30 days and the Verification process takes 60 days. However, if you successfully complete all the Trading Objectives before the 30-day mark, you won&apos;t have to wait for the remaining days to start the Verification process. For instance, if you manage to finish the Trading Objectives in 11 days, you won&apos;t have to wait for 19 more days. Instead, you will be moved to the Verification process as soon as possible
+        The FMFX Challenge lasts for 30 days and the Verification process takes 60 days. However, if you successfully complete all the Trading Objectives before the 30-day mark, you won&apos;t have to wait for the remaining days to start the Verification process. For instance, if you manage to finish the Trading Objectives in 11 days, you won&apos;t have to wait for 19 more days. Instead, you will be moved to the Verification process as soon as possible
         </p>
       
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Minimum trading days</p>
@@ -108,7 +108,7 @@ export default function Home() {
 
         Current daily loss = results from closed positions for the day + result of open positions.
 
-        For instance, if you are participating in an FTX Challenge with an initial account balance of $200,000, the Max Daily Loss limit is $10,000. If you incur losses of $8,000 in your closed trades, your account must not decrease by more than $2,000 in that day. Additionally, your open floating losses must not exceed -$2,000. This limit includes commissions and swaps.
+        For instance, if you are participating in an FMFX Challenge with an initial account balance of $200,000, the Max Daily Loss limit is $10,000. If you incur losses of $8,000 in your closed trades, your account must not decrease by more than $2,000 in that day. Additionally, your open floating losses must not exceed -$2,000. This limit includes commissions and swaps.
 
         Conversely, if you earn a profit of $5,000 in a single day, you are allowed to incur losses of up to $15,000, but not beyond that. It is important to note that your Maximum Daily Loss takes into account your open trades as well. For instance, if you close trades with a loss of $6,000 in a day and subsequently open a new trade that incurs a floating loss of -$5,700 before ultimately becoming profitable, your daily loss would have already exceeded the permitted loss of $10,000, since at one point it would have been -$11,700.
 
@@ -119,26 +119,26 @@ export default function Home() {
         
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Maximum Loss</p>
         <p className='text-md font-normal text-blue-gray-800'>
-        The account stop-loss rule is another term for this policy. The equity of the trading account cannot fall below 90% of the initial account balance at any point during the account duration. For instance, in an FTX Challenge with a balance of $100,000, the lowest equity the account can reach is $90,000. This is calculated by adding up both the closed and open positions, and not the account balance. The calculation logic is the same as that of the Maximum Daily Loss, with the only difference being that it is not limited to a single day but rather to the entire testing period. The limit is comprehensive of commissions and swaps. The 10% of the initial account balance provides sufficient room for the trader to demonstrate that their account is suitable for investment. It is a safety net that should keep the trader in the game even in the event of some initial losses. The investor has the assurance that under no circumstances can the trader&apos;s account decline below 90% (80% in the case of the Aggressive version) of its value.
+        The account stop-loss rule is another term for this policy. The equity of the trading account cannot fall below 90% of the initial account balance at any point during the account duration. For instance, in an FMFX Challenge with a balance of $100,000, the lowest equity the account can reach is $90,000. This is calculated by adding up both the closed and open positions, and not the account balance. The calculation logic is the same as that of the Maximum Daily Loss, with the only difference being that it is not limited to a single day but rather to the entire testing period. The limit is comprehensive of commissions and swaps. The 10% of the initial account balance provides sufficient room for the trader to demonstrate that their account is suitable for investment. It is a safety net that should keep the trader in the game even in the event of some initial losses. The investor has the assurance that under no circumstances can the trader&apos;s account decline below 90% (80% in the case of the Aggressive version) of its value.
         </p>
       
         
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Profit Target</p>
         <p className='text-md font-normal text-blue-gray-800'>
               
-        The FTX Challenge and Verification have specific profit targets which are 10% and 20% respectively for the initial balance, and 5% and 10% respectively for the Verification. Meeting the profit target means that the sum of closed positions on the assigned trading account should reach the specified percentage within 30 calendar days for the FTX Challenge and within 60 calendar days for the Verification. Furthermore, all positions must be closed at the end of the trading period. For instance, if a trader is using an FTX Challenge account with an initial balance of $100,000, the profit target is $10,000 for the FTX Challenge and $5,000 for the Verification. It is important to note that once a trader meets all the Trading Objectives (whether in the FTX Challenge or Verification), except for the Profit Target, they will be provided with a new free FTX Challenge. However, to receive the new FTX Challenge for free, the trader&apos;s account profit must be positive at the end of the duration with all positions being closed.
+        The FMFX Challenge and Verification have specific profit targets which are 10% and 20% respectively for the initial balance, and 5% and 10% respectively for the Verification. Meeting the profit target means that the sum of closed positions on the assigned trading account should reach the specified percentage within 30 calendar days for the FMFX Challenge and within 60 calendar days for the Verification. Furthermore, all positions must be closed at the end of the trading period. For instance, if a trader is using an FMFX Challenge account with an initial balance of $100,000, the profit target is $10,000 for the FMFX Challenge and $5,000 for the Verification. It is important to note that once a trader meets all the Trading Objectives (whether in the FMFX Challenge or Verification), except for the Profit Target, they will be provided with a new free FMFX Challenge. However, to receive the new FMFX Challenge for free, the trader&apos;s account profit must be positive at the end of the duration with all positions being closed.
         </p>
       
         
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Free Repeat</p>
         <p className='text-md font-normal text-blue-gray-800'>
-        In case you fulfill all the Trading Objectives except for the Profit Target (whether in the FTX Challenge or Verification), and you close all positions while keeping a positive balance, you can redo the FTX Challenge for free. As long as you practice responsible risk management, you can attempt to pass the challenge an unlimited number of times.
+        In case you fulfill all the Trading Objectives except for the Profit Target (whether in the FMFX Challenge or Verification), and you close all positions while keeping a positive balance, you can redo the FMFX Challenge for free. As long as you practice responsible risk management, you can attempt to pass the challenge an unlimited number of times.
         </p>
       
         
         <p className='font-bold text-xl text-cyan-500 py-4 pb-1'>Refundable Fee</p>
         <p className='text-md font-normal text-blue-gray-800'>
-        When you become an FTX Trader, the initial fee will be reimbursed to you along with the first Profit Split.
+        When you become an FMFX Trader, the initial fee will be reimbursed to you along with the first Profit Split.
         </p>
       
 
@@ -146,7 +146,7 @@ export default function Home() {
       
     </main>
     <div className="w-full m-auto p-28 bg-cyan-500 flex justify-center items-center flex-col md:p-4">
-       <p className='text-center font-bold text-4xl text-blue-gray-50' style={{lineHeight:'45px'}}>Join FTX traders <br />and get funded with upto 300k USD </p>
+       <p className='text-center font-bold text-4xl text-blue-gray-50' style={{lineHeight:'45px'}}>Join FMFX traders <br />and get funded with upto 300k USD </p>
        <Link href={'/client-area'} className='py-2 px-10 my-8 border border-blue-gray-50 rounded-lg text-white'>Get Started</Link>
     </div>
     <Footer/>

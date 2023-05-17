@@ -116,7 +116,7 @@ const navListItems = [
     to:'#goals'
   },
   {
-    label: "Terms & Conditions",
+    label: "About Us",
     icon: CodeBracketSquareIcon,
     to:''
   },
@@ -164,7 +164,7 @@ export default function NavBar() {
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium flex items-center gap-2"
         >
           <Image width={30} src={logo} alt="logo"/>
-          <span className="font-extrabold text-blue-gray-800">FMP</span>
+          <span className="font-extrabold text-blue-gray-800">FMFX</span>
           
         </Typography>
         <div className="absolute top-2/4 left-2/4 hidden -translate-x-2/4 -translate-y-2/4 lg:block">

@@ -13,7 +13,7 @@ const Newpassword = ()=>{
     return<><div className="w-full py-8 max-w-lg mx-auto px-3">
            <div className="mx-auto pb-6 flex items-center gap-2">
             <Image src = {logo} alt="LOGO" width={50}/>
-            <p className="font-extrabold text-3xl text-blue-gray-800">FMP</p>
+            <p className="font-extrabold text-3xl text-blue-gray-800">FMFX</p>
             
            </div>
           <p className='text-3xl font-normal text-blue-gray-800 pb-4'>Set New Password</p>

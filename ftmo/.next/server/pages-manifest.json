@@ -2,19 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/hello": "pages/api/hello.js",
-  "/billing": "pages/billing.html",
-  "/challenges": "pages/challenges.html",
-  "/client-area": "pages/client-area.html",
-  "/earning": "pages/earning.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
-  "/new-challenge": "pages/new-challenge.html",
-  "/newpassword": "pages/newpassword.html",
-  "/order/[id]": "pages/order/[id].html",
-  "/profile": "pages/profile.html",
-  "/register": "pages/register.html",
-  "/reset": "pages/reset.html",
-  "/support": "pages/support.html",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }
