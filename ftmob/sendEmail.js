@@ -4,8 +4,8 @@ const AWS = require('aws-sdk');
 module.exports.sendEmail = (to,sub,msg)=>{
 
 AWS.config.update({
-  accessKeyId: 'AKIASV62DVA5JWW4INAR',
-  secretAccessKey: 'cDGQNb216hn58TXEuYNmBxDA+uJpFIxI3aSSA5Zf',
+  accessKeyId: '',
+  secretAccessKey: '',
   region: 'us-east-1' // Replace with your desired AWS region
 });
 
