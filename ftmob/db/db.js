@@ -18,15 +18,15 @@ const mysql = require('mysql')
 module.exports.pool = mysql.createPool({
    connectionLimit : 100,
    host     : 'localhost',
-   user     : 'root',
-   password : '',
+   user     : 'rootuser',
+   password : 'Nashdev@098',
    database : 'ftmo'
  })
  const pool = mysql.createPool({
    connectionLimit : 100,
    host     : 'localhost',
-   user     : 'root',
-   password : '',
+   user     : 'rootuser',
+   password : 'Nashdev@098',
    database : 'ftmo'
  })
 

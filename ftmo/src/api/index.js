@@ -1,6 +1,6 @@
 
 import axios from "axios";
-export const baseUrl = 'http://localhost:5000/api/'
+export const baseUrl = 'https://fundmefx.com/api/'
 
 const config = ()=>{
     return {

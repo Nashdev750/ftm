@@ -2,8 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const  jwt   = require('jsonwebtoken')
 const bcrypt  = require('bcrypt')
-const {save, fetch} = require('./db/db')
+const {save, fetch, update} = require('./db/db')
 const { middleware } = require('./middleware')
+const { sendEmail } = require('./sendEmail')
 
 const app = express()
 
@@ -165,6 +166,43 @@ app.post('/api/login',async (req,res)=>{
    } catch (error) {
        res.send({error:error.message})   
    }
+})
+
+app.get('/api/otp/:email', async (req, res)=>{
+   try {
+        const users = await fetch('SELECT email FROM users WHERE email = ?', [req.params.email])
+        if(users?.length != 1) return  res.status(500).send({error:'Account not found'})
+        const sql = 'INSERT INTO otp SET ?'
+        const str = 'OIU6Y66T5R3E2W1A9S7D6FG55H3JK3LMNB3652V234CX49Z'
+        let code = ''
+        for (let i = 0; i < 6; i++) {
+            const index = Math.floor(Math.random()*(str.length-1))
+            code += str[index]
+        }
+        await save(sql,[{email:req.params.email,code}])
+        const msg = 'Someone tried to reset password. If this was not you, ignore this email. OTP: <strong>'+code+'</strong>'
+        sendEmail(req.params.email,'Password Reset Code', msg)
+        res.send({success:true})
+   } catch (error) {
+        res.send({error:error.message}) 
+   }
+})
+app.post('/api/reset/:email', async (req, res)=>{
+  try {
+    if(!req.body?.password) return res.status(500).send({error:'Password is required'})
+    const users = await fetch('SELECT email FROM users WHERE email = ?', [req.params.email])
+    if(users?.length != 1) return res.status(500).send({error:'Account not found'})
+    const otp = await fetch('SELECT code FROM otp WHERE email = ? AND code = ? AND status = 0', [req.params.email, req.body?.otp])
+    if(otp?.length != 1) return res.status(500).send({error:'Invalid OTP'})
+    const salt = bcrypt.genSaltSync(10)
+    const password = bcrypt.hashSync(req.body.password,salt)
+  
+    save('UPDATE users SET ? WHERE email = ?',[{password},req.params.email])
+    save('UPDATE otp SET status = 1 WHERE email = ?',[req.params.email])
+    res.send({success:true})
+  } catch (error) {
+    res.send({error:error.message}) 
+  }
 })
 
 app.listen(5000)

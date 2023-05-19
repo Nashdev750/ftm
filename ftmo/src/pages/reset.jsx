@@ -6,10 +6,22 @@ import logo from '../images/logo.png'
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import React from "react";
+import { getData, postData } from "@/api";
+import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const Reset = ()=>{
+     const router = useRouter()
     const { register, handleSubmit,setValue, formState: { errors } } = useForm();
-    const onSubmit = data =>{console.log(data);} 
+    const onSubmit = data =>{
+          getData('otp/'+data.email)
+          .then(res=>{
+             router.push('/newpassword/'+data.email)
+          })
+          .catch(err=>{
+               toast.error(err?.response?.data?.error || "Network error please try again")
+          })
+    } 
     return<><div className="w-full py-8 max-w-lg mx-auto px-3">
            <div className="mx-auto pb-6 flex items-center gap-2">
             <Image src = {logo} alt="LOGO" width={50}/>

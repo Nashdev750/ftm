@@ -118,7 +118,7 @@ const navListItems = [
   {
     label: "About Us",
     icon: CodeBracketSquareIcon,
-    to:''
+    to:'about'
   },
 ];
  
