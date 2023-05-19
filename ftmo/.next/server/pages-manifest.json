@@ -1,9 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/about": "pages/about.html",
-  "/billing": "pages/billing.html",
   "/api/hello": "pages/api/hello.js",
+  "/billing": "pages/billing.html",
   "/challenges": "pages/challenges.html",
   "/client-area": "pages/client-area.html",
   "/earning": "pages/earning.html",
@@ -17,6 +18,5 @@
   "/reset": "pages/reset.html",
   "/support": "pages/support.html",
   "/terms": "pages/terms.html",
-  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }

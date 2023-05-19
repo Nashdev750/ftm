@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 // import { getData } from '@/constants';
 // import Login from '@/pages/admin/login';
 import React from 'react';
+import Loader from './Loader';
 
 
 const Auth = (Child) => {
@@ -26,7 +27,7 @@ const Auth = (Child) => {
             });
         }, [auth]);
     
-        if (loading) return <Wrapper Child={() => <div className="p-5">loading</div>} />;
+        if (loading) return <Wrapper Child={() => <Loader/>} />;
         if (!auth) return <Login/>;
         return <Wrapper Child={Child} />;
       };

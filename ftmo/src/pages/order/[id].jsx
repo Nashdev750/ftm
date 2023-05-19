@@ -62,22 +62,7 @@ const Order = ()=>{
 
     },[id])
  
-    const {sendTransaction } = useSendTransaction(
-        
-        {
-            value:'10000000000000000',
-            to:'0xce327f52C1A478cf14F1b4D9D90dA4C6642B2e3c',
-            
-            onSuccess:(data)=>{
-              console.log(data)
-            },
-           
-            onError:(er)=>{
-                console.log(er)
-            },
-            
-        }
-    )
+    
     return <> 
        {loading 
          ?<div className="w-full flex justify-center items-center py-5 flex-col gap-3">
