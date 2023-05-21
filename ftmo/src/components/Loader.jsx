@@ -1,8 +1,9 @@
-import loader from "../images/loader2.gif"
+import Image from "next/image"
+import loader2 from "../images/loader2.gif"
 const Loader = ()=>{
     return (
-        <div className="loader">
-           <img src={loader} alt="" />
+        <div className="flex justify-center items-center fixed w-screen h-screen bg-transparent">
+           <Image src={loader2} alt="" className="w-[200px] " />
         </div>
     )
 }

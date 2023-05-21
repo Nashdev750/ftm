@@ -1,11 +1,13 @@
 import { HomeIcon } from "@heroicons/react/24/outline"
 import { Button } from "@material-tailwind/react"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const Sidebar = ({show})=>{
+    const router = useRouter()
     return <div className={`w-full  h-full max-w-[250px] max-h-[90%] shadow-md bg-white rounded-md fixed border flex flex-col items-start md:ml-[-300px] ${show?'ml0':''} transition-all z-10`}>
         <div className="w-full flex justify-center items-center py-5 px-2">
-            <Button className="w-full">New Challenge</Button>
+            <Button onClick={e=>router.push('/new-challenge')} className="w-full">New Challenge</Button>
         </div>
         <div>
             <p className="text-blue-gray-400 p-3">Menu</p>

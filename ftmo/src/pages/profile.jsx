@@ -4,6 +4,7 @@ import Auth from "@/components/Auth"
 import { Button, Input, Textarea } from "@material-tailwind/react"
 import { useState } from "react"
 import { toast } from "react-toastify"
+import Footer2 from "@/components/Footer2"
 
 
 const Profile = ()=>{
@@ -30,7 +31,7 @@ const Profile = ()=>{
                <p className="text-gray-700 py-0">Verified Trader: <span className="text-blue-500"> No</span></p>
             </div>
             </div>
-
+            <Footer2/>
           </Layout>
 }
 export default Auth(Profile)

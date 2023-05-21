@@ -12,6 +12,8 @@ import Link from 'next/link'
 import { getData, postData } from '@/api'
 import { toast } from 'react-toastify'
 import { useRouter } from 'next/router'
+import Auth from '@/components/Auth'
+import Footer2 from '@/components/Footer2'
 
 const moneyFormat = (val)=>{
     if(isNaN(val)) return '0'
@@ -151,7 +153,7 @@ const NewChallenge = ()=>{
                 <div className="w-full border"></div>
                 <div className="w-full">
                     <p className="text-blue-gray-600 font-semibold p-4">Billing Details</p>
-                    <div className="w-full flex items-center p-2 pt-0 md:flex-wrap">
+                    <div className="w-full flex items-center flex-wrap p-2 pt-0">
                       <div className="w-1/2 p-2 md:w-full">
                         <Input type="text" error={errors.fname} label="First Name"  {...register("fname",{required:true})} />
                       </div>
@@ -201,7 +203,8 @@ const NewChallenge = ()=>{
           {/* coupon */}
           
         </div>
+        <Footer2/>
     </Layout>
 }
 
-export default NewChallenge
+export default Auth(NewChallenge)

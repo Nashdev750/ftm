@@ -4,6 +4,7 @@ import auth from "@/components/Auth"
 import { Button, Input, Textarea } from "@material-tailwind/react"
 import { useState } from "react"
 import { toast } from "react-toastify"
+import Footer2 from "@/components/Footer2"
 
 
 const Support = ()=>{
@@ -41,7 +42,7 @@ const Support = ()=>{
                >{loading?'Sending...':'Send'}</Button>
             </div>
             </div>
-
+            <Footer2/>
           </Layout>
 }
 export default auth(Support)

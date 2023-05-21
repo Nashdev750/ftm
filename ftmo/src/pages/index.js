@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavBar'
 import { useRouter } from 'next/router'
+import Comparison from '@/components/Comparison'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -88,6 +89,8 @@ export default function Home() {
           </div>
 
         </div>
+        <h1 className="w-full font-bold text-2xl text-cyan-500 py-4 px-0">FundMeFx Trading Objectives</h1>
+        <Comparison/>
       </div>
       <div className="w-3/4 m-auto py-10 md:w-full md:px-4" id='goals'>
         <p className='text-3xl font-normal text-blue-gray-800'>What you need to know before you start trading.</p>

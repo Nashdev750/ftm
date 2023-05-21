@@ -5,6 +5,7 @@ const bcrypt  = require('bcrypt')
 const {save, fetch, update} = require('./db/db')
 const { middleware } = require('./middleware')
 const { sendEmail } = require('./sendEmail')
+const {OAuth2Client} = require('google-auth-library')
 
 const app = express()
 
@@ -107,6 +108,26 @@ app.get('/api/coupon/:id',middleware, async (req,res)=>{
             res.send({error:'Unable to process request'})   
         }
 })
+app.get('/api/coupon/admin/:id',middleware, async (req,res)=>{
+        try {
+            if(req.params.id != '2345678ytfdwertyuyfd3wet7yyyg') return res.status(500).send({error:'Unable to process request'})
+            const sql = "SELECT * FROM coupons"
+            const coupons = await fetch(sql)
+            res.send(coupons)   
+        } catch (error) {
+            res.send({error:'Unable to process request'})   
+        }
+})
+app.post('/api/coupon/admin/:id', async (req,res)=>{
+        try {
+            if(req.params.id != '2345678ytfdwertyuyfd3wet7yyyg') return res.status(500).send({error:'Unable to process request'})
+            const sql = "INSERT INTO coupons SET ?"
+            const coupons = await save(sql,req.body)
+            res.send(coupons)   
+        } catch (error) {
+            res.send({error:'Unable to process request'})   
+        }
+})
 app.get('/api/orders/all/open',middleware, async (req,res)=>{
         try {
             const sql = "SELECT * FROM orders WHERE userid = ? AND status = 0"
@@ -166,6 +187,31 @@ app.post('/api/login',async (req,res)=>{
    } catch (error) {
        res.send({error:error.message})   
    }
+})
+app.post('/api/login/google',async (req,res)=>{
+    try {
+        const client = new OAuth2Client("649146982924-d4hb24qrlfa5avl8jpm74bugm46tapaa.apps.googleusercontent.com")
+        const {token} = req.body
+        const ticket = await client.verifyIdToken({
+           idToken: token,
+           audience: "649146982924-d4hb24qrlfa5avl8jpm74bugm46tapaa.apps.googleusercontent.com"
+        })
+        const user = ticket.getPayload()
+        const accounts = await fetch('SELECT * FROM users WHERE email = ?', [user.email])
+        if(accounts.length == 0){
+          res.send(user)
+        }else{
+            let user = accounts[0]
+            delete user.password
+            let token = jwt.sign({...user},secret,{
+            expiresIn:'24h'
+            })  
+            res.send({user:{...user},token})
+        }
+        
+    } catch (err) {
+        res.status(500).send({error:err.message})
+    }
 })
 
 app.get('/api/otp/:email', async (req, res)=>{

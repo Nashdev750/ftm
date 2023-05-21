@@ -11,6 +11,8 @@ import {
   import Link from "next/link";
   import { moneyFormat } from "@/components/countries";
   import moment from 'moment/moment';
+import Auth from "@/components/Auth";
+import Footer2 from "@/components/Footer2";
   
   const TABLE_HEAD = ["#","status", "Account", "Credentials","Analysis", "Date",];
    
@@ -43,7 +45,7 @@ import {
                   },
   }
   
-  export default function Challenges() {
+  const Challenges = ()=> {
   
       const [orders, setOrders] = useState([])
       useEffect(()=>{
@@ -54,7 +56,7 @@ import {
       },[])
     return (
       <Layout>
-      <Card className="h-full w-full">
+      <Card className="h-fit w-full">
         <CardHeader floated={false} shadow={false} className="rounded-none">
           <div className="mb-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
             <div>
@@ -142,6 +144,9 @@ import {
         <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
         </CardFooter>
       </Card>
+       <Footer2/>
       </Layout>
     );
   }
+
+  export default Auth(Challenges)

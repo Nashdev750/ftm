@@ -5,10 +5,11 @@ import Link from "next/link";
 import logo from '../images/logo.png'
 import Image from "next/image";
 import Footer from "@/components/Footer";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Select, Option } from "@material-tailwind/react";
 import { postData } from "@/api";
 import { toast } from "react-toastify";
+import { UserContext } from "@/context/User";
 
 const countries = [
     {
@@ -894,6 +895,13 @@ const countries = [
 
 const Register = ()=>{
     const { register, handleSubmit,setValue, formState: { errors } } = useForm();
+    const {user} = useContext(UserContext)
+    useEffect(()=>{
+        if(Object.keys(user).length == 0) return
+        setValue('email',user?.email)
+        setValue('fname',user?.given_name)
+        setValue('lname',user?.family_name)
+    },[])
     const onSubmit = data =>{
         if(data.password != data.pass) return toast.error("Password don't match")
         if(data.password.length < 6) return toast.error("Password should be at leat 6 characters")
